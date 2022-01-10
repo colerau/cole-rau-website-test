@@ -7,14 +7,14 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
+  background-color: #121212;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,28 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#coleRauContainer {
+  width: 26em;
+  height: 13em;
+  border: 6px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: rainbow-border;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#coleRau {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 118px;
+  animation-name: rainbow-font;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .App-link {
@@ -34,5 +56,47 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rainbow-border {
+  0% {
+    border-color: red;
+  }
+  20% {
+    border-color: orange;
+  }
+  40% {
+    border-color: yellow
+  }
+  60% {
+    border-color: green
+  }
+  80% {
+    border-color: blue
+  }
+  100% {
+    border-color: purple
+  }
+}
+
+@keyframes rainbow-font {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow
+  }
+  60% {
+    color: green
+  }
+  80% {
+    color: blue
+  }
+  100% {
+    color: purple
   }
 }
